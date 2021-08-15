@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		通过设置DOM对象的显示与隐藏方式，可以产生动画效果。
+
+		1.无动画效果的隐藏与显示
+		hide()：在HTML文档中，为一个元素调用hide()方法会将该元素的display样式改为none。代码功能同css(“display”, “none”);相同。
+		show()：将元素的display样式改为先前的显示状态。
+		toggle()：切换元素的可见状态：如果元素时可见的，则切换为隐藏；如果元素时隐藏的，则切换为可见的。
+
+		2.通过设置透明度效果的隐藏与显示，达到淡入淡出的动画效果
+		fadeIn()，fadeOut()：只改变元素的透明度。fadeOut() 会在指定的一段时间内降低元素的不透明度，直到元素完全消失。fadeIn()
+		则相反。如，用600毫秒缓慢的将段落淡入：$("p").fadeIn("slow");。
+		fadeTo()：把不透明度以渐近的方式调整到指定的值(0 – 1 之间)。并在动画完成后可选地触发一个回调函数。如，用200毫秒快速将段落的透明度调整到0.25，动画结束后，显示一个“Animation
+		Done”信息框：“$("p").fadeTo("fast", 0.25, function(){ alert("Animation Done."); });”。
+
+		3.通过设置高度效果的隐藏与显示，达到滑下与收起的动画效果
+		slideDown()，slideUp()：只会改变元素的高度。如果一个元素的display属性为none，当调用slideDown() 方法时，这个元素将由上至下延伸显示。slideUp()
+		方法正好相反，元素由下至上缩短隐藏。如，用600毫秒缓慢的将段落滑下：$("p").slideDown("slow");。
+		slideToggle()：通过高度变化来切换匹配元素的可见性。如，200毫秒快速将段落滑上或滑下，动画结束后，会显示一个“Animation
+		Done”信息框：“$("p").slideToggle("fast",function(){ alert("Animation Done."); });”。
+
+		使用JavaScript、JQuery可以处理当前页面的动态更新，再结合CSS样式可以做出十分漂亮的UI，甚至比桌面软件UI漂亮的多。JavaScript的编写与调试非常麻烦，所以也有一些公司出品了专门针对JavaScript应用的简化开发，比如Google出品的GWT，可以像使用Java编写swing那样编写JavaScript。
+		它为用户提供像swing那样的UI接口与事件等操作并且支持JAVA的核心库。使用GWT自己的编译器，可以将JAVA代码编译为JavaScript代码、CSS样式文件和HTML。
+	</body>
+</html>
